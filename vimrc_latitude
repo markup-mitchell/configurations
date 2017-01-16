@@ -41,7 +41,7 @@ Bundle 'gmarik/vundle'
 
 " Just a shitload of color schemes.
 " https://github.com/flazz/vim-colorschemes#current-colorschemes
-Bundle 'flazz/vim-colorschemes'
+" Bundle 'flazz/vim-colorschemes'
 
 " Fuzzy finder -- absolutely must have.
 Bundle 'kien/ctrlp.vim'
@@ -68,10 +68,10 @@ Bundle 'indenthtml.vim'
 Bundle 'tpope/vim-markdown'
 
 " LessCSS -- I use this every day.
-Bundle 'groenewege/vim-less'
+" Bundle 'groenewege/vim-less'
 
 " Coffee-script syntax.
-Bundle 'kchmck/vim-coffee-script'
+" Bundle 'kchmck/vim-coffee-script'
 
 
 " We have to turn this stuff back on if we want all of our features.
@@ -185,3 +185,8 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
+
+" remove menu bar
+" set guioptions-=m  
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
