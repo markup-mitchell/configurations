@@ -1,4 +1,4 @@
-v" Beginners .vimrc " v0.1 2012-10-22 Philip Thrasher
+" Beginners .vimrc " v0.1 2012-10-22 Philip Thrasher
 "
 " Important things for beginners:
 " * Start out small... Don't jam your vimrc full of things you're not ready to
@@ -72,7 +72,6 @@ Bundle 'tpope/vim-markdown'
 
 " Coffee-script syntax.
 " Bundle 'kchmck/vim-coffee-script'
-
 
 " We have to turn this stuff back on if we want all of our features.
 filetype plugin indent on " Filetype auto-detection
@@ -168,8 +167,8 @@ set t_Co=256
 " link above (back up where we included the bundle of a ton of themes.)
 
 " colorscheme distinguished
-colorscheme jellybeans
-
+colorscheme gruvbox 
+set bg=dark
 
 " vim-airline - make it work before splitting pane:
 set laststatus=2
