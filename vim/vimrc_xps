@@ -47,13 +47,13 @@ filetype plugin indent on    " required
 
 
 set number
-colorscheme desert 
-" colorscheme gruvbox 
+colorscheme desert
+" colorscheme gruvbox
 syntax on
 set t_Co=256
-set laststatus=2 " this was added to make airline work 
+set laststatus=2 " this was added to make airline work
 let g:airline_theme='zenburn'
 set guioptions -=T  " hide toolbar http://stackoverflow.com/questions/13525518/how-to-hide-the-menu-tool-bar-of-gvim#13525565
 set guioptions -=r  " hide scrollbar
 let g:airline_powerline_fonts = 1
-set guifont=Monospace\ 12 " http://stackoverflow.com/questions/17508542/how-to-set-the-default-font-size-on-vim          
+set guifont=Monospace\ 12 " http://stackoverflow.com/questions/17508542/how-to-set-the-default-font-size-on-vim

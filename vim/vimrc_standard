@@ -39,15 +39,15 @@ call vundle#rc()
 " Let vundle manage itself:
 Bundle 'gmarik/vundle'
 
-" Just a shitload of color schemes.
-" https://github.com/flazz/vim-colorschemes#current-colorschemes
-" Bundle 'flazz/vim-colorschemes'
 
 " Fuzzy finder -- absolutely must have.
-Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim'
 
 " Support for easily toggling comments.
 Bundle 'tpope/vim-commentary'
+
+" autocompletion helper - eg html:5 then action [CTRL+Y][,]
+Plugin 'mattn/emmet-vim'
 
 " In addtion to the above plugins, you'll likely need some for individual
 " non-standard syntaxes that aren't pre-bundled with vim. Here are some I use,
@@ -167,7 +167,7 @@ set t_Co=256
 " link above (back up where we included the bundle of a ton of themes.)
 
 " colorscheme distinguished
-colorscheme gruvbox 
+colorscheme gruvbox
 set bg=dark
 
 " vim-airline - make it work before splitting pane:
@@ -186,6 +186,6 @@ endif
 let g:airline_symbols.space = "\ua0"
 
 " remove menu bar
-" set guioptions-=m  
+" set guioptions-=m
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
