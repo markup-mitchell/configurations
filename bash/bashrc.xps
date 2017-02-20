@@ -1,0 +1,22 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+
+alias unzip="echo '\"unzip\" aliased to: \"7za x\"';7za x"
+
+alias ontouchpad="echo '\"ontouchpad\" aliased to: \"synclient TouchpadOff=0\" - TOUCHPAD IS NOW ENABLED';synclient TouchpadOff=0"
+
+alias offtouchpad="echo '\"offtouchpad\" aliased to: \"synclient TouchpadOff=1\" - TOUCHPAD IS NOW DISABLED';synclient TouchpadOff=1"
+
+# path value to enable ruby gems to run
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+# source path for autojump
+source /etc/profile.d/autojump.bash
+
