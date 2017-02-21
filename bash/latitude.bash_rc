@@ -6,5 +6,12 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+alias popvim='/home/mitch/coding/pophints/vimhints.sh'
+alias popbash='/home/mitch/coding/pophints/bashhints.sh'
+alias popgit='/home/mitch/coding/pophints/githints.sh'
+alias popmark='/home/mitch/coding/pophints/mdhints.sh'
+alias popchrome='/home/mitch/coding/pophints/chromehints.sh'
+
 PS1='[\u@\h \W]\$ '
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+source /etc/profile.d/autojump.bash
