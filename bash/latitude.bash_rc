@@ -16,9 +16,9 @@ PS1='[\u@\h \W]\$ '
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 source /etc/profile.d/autojump.bash
 # source ~/.bash-powerline.sh
-if [ -f `which powerline-daemon` ]; then
-  powerline-daemon -q
-  POWERLINE_BASH_CONTINUATION=1
-  POWERLINE_BASH_SELECT=1
-  . /usr/share/powerline/bash/powerline.sh
-fi
+# if [ -f `which powerline-daemon` ]; then
+#   powerline-daemon -q
+#   POWERLINE_BASH_CONTINUATION=1
+#   POWERLINE_BASH_SELECT=1
+#   . ~/.bash-powerline.sh
+# fi
