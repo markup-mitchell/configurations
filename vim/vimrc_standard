@@ -3,7 +3,7 @@
 " Important things for beginners:
 " * Start out small... Don't jam your vimrc full of things you're not ready to
 "   immediately use.
-" * Read other people's vimrc's.
+
 " * Use a plugin manager for christ's sake! (I highly recommend vundle)
 " * Spend time configuring your editor... It's important. Its the tool you
 "   spend 8 hours a day crafting your reputation.
@@ -39,15 +39,15 @@ call vundle#rc()
 " Let vundle manage itself:
 Bundle 'gmarik/vundle'
 
+" Just a shitload of color schemes.
+" https://github.com/flazz/vim-colorschemes#current-colorschemes
+" Bundle 'flazz/vim-colorschemes'
 
 " Fuzzy finder -- absolutely must have.
-" Bundle 'kien/ctrlp.vim'
+Bundle 'kien/ctrlp.vim'
 
 " Support for easily toggling comments.
 Bundle 'tpope/vim-commentary'
-
-" autocompletion helper - eg html:5 then action [CTRL+Y][,]
-Plugin 'mattn/emmet-vim'
 
 " In addtion to the above plugins, you'll likely need some for individual
 " non-standard syntaxes that aren't pre-bundled with vim. Here are some I use,
@@ -56,6 +56,10 @@ Plugin 'mattn/emmet-vim'
 
 " Proper JSON filetype detection, and support.
 Bundle 'leshill/vim-json'
+ 
+" jsx syntax highlighting 
+Bundle 'mxw/vim-jsx'
+let g:jsx_ext_required = 0 " enable jsx syntax on all js ext, not just .jsx
 
 " vim already has syntax support for javascript, but the indent support is
 " horrid. This fixes that.
@@ -66,6 +70,19 @@ Bundle 'indenthtml.vim'
 
 " I write markdown a lot. This is a good syntax.
 Bundle 'tpope/vim-markdown'
+
+" Surround plugin
+Bundle 'tpope/vim-surround'
+
+" autocompletion helper - [CTRL+Y][,] - eg html.5 then action...
+Bundle 'mattn/emmet-vim'
+
+" hint-based navigation with the \ backslash
+Bundle 'easymotion/vim-easymotion'
+
+" make various plugin actions repeatable with .
+Bundle 'tpope/vim-repeat'
+"
 
 " LessCSS -- I use this every day.
 " Bundle 'groenewege/vim-less'
@@ -85,7 +102,8 @@ set smarttab " let's tab key insert 'tab stops', and bksp deletes tabs.
 set shiftround " tab / shifting moves to closest tabstop.
 set autoindent " Match indents on new lines.
 set smartindent " Intellegently dedent / indent new lines based on rules.
-set number
+" set number
+set relativenumber
 
 " We have VCS -- we don't need this stuff.
 set nobackup " We have vcs, we don't need backups.
@@ -142,8 +160,9 @@ nnoremap <leader><leader> <c-^>
 " Visual line nav, not real line nav
 " If you wrap lines, vim by default won't let you move down one line to the
 " wrapped portion. This fixes that.
-noremap j gj
-noremap k gk
+" Commented out because it fucks up rnu navigation.
+" noremap j gj
+" noremap k gk
 
 " Plugin settings:
 " Below are some 'sane' (IMHO) defaults for a couple of the above plugins I
@@ -151,6 +170,7 @@ noremap k gk
 
 " Map the key for toggling comments with vim-commentary
 nnoremap <leader>c <Plug>CommentaryLine
+
 
 " Remap ctrlp to ctrl-t -- map it however you like, or stick with the
 " defaults. Additionally, in my OS, I remap caps lock to control. I never use
@@ -189,3 +209,4 @@ let g:airline_symbols.space = "\ua0"
 " set guioptions-=m
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
+
