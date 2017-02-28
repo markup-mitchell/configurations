@@ -6,7 +6,10 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+
+# Cursor prompt
+# PS1='[\u@\h \W]\$ '
+PS1='[\W]\$ '
 
 alias unzip="echo '\"unzip\" aliased to: \"7za x\"';7za x"
 
