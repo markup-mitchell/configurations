@@ -3,7 +3,6 @@
 " Important things for beginners:
 " * Start out small... Don't jam your vimrc full of things you're not ready to
 "   immediately use.
-
 " * Use a plugin manager for christ's sake! (I highly recommend vundle)
 " * Spend time configuring your editor... It's important. Its the tool you
 "   spend 8 hours a day crafting your reputation.
@@ -82,7 +81,6 @@ Bundle 'easymotion/vim-easymotion'
 
 " make various plugin actions repeatable with .
 Bundle 'tpope/vim-repeat'
-"
 
 " LessCSS -- I use this every day.
 " Bundle 'groenewege/vim-less'
@@ -102,8 +100,11 @@ set smarttab " let's tab key insert 'tab stops', and bksp deletes tabs.
 set shiftround " tab / shifting moves to closest tabstop.
 set autoindent " Match indents on new lines.
 set smartindent " Intellegently dedent / indent new lines based on rules.
-" set number
-set relativenumber
+
+set number " required to set absolute number when rnu removed
+set relativenumber " required to set rnu on top of number
+" below toggles rnu on/off
+nnoremap <F2> :set norelativenumber!<CR> 
 
 " We have VCS -- we don't need this stuff.
 set nobackup " We have vcs, we don't need backups.
@@ -131,8 +132,10 @@ let mapleader = ","
 
 
 " So we don't have to press shift when we want to get into command mode.
-nnoremap ; :
-vnoremap ; :
+" commented out because it makes repeat f with ; impossible. And I always
+" shift for : anyway
+" nnoremap ; :
+" vnoremap ; :
 
 " So we don't have to reach for escape to leave insert mode.
 inoremap jf <esc>
@@ -209,4 +212,5 @@ let g:airline_symbols.space = "\ua0"
 " set guioptions-=m
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
+
 
