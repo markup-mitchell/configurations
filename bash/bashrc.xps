@@ -13,6 +13,13 @@ alias unzip="echo '\"unzip\" aliased to: \"7za x\"';7za x"
 alias ontouchpad="echo '\"ontouchpad\" aliased to: \"synclient TouchpadOff=0\" - TOUCHPAD IS NOW ENABLED';synclient TouchpadOff=0"
 
 alias offtouchpad="echo '\"offtouchpad\" aliased to: \"synclient TouchpadOff=1\" - TOUCHPAD IS NOW DISABLED';synclient TouchpadOff=1"
+alias popgit='~/coding/pophints/githints.sh'
+alias popbash='~/coding/pophints/bashhints.sh'
+alias popvim='~/coding/pophints/vimhints.sh'
+alias popchrome='~/coding/pophints/chromehints.sh'
+alias popretroarch='~/coding/pophints/retroarchints.sh'
+alias popbluetooth='~/coding/pophints/bluetoothhints.sh'
+alias popmarkdown='~/coding/pophints/mdhints.sh'
 
 # path value to enable ruby gems to run
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
